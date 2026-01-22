@@ -1,0 +1,153 @@
+# general settings
+name: SDSD_indoor
+model_type: ImageCleanModel
+scale: 1
+num_gpu: 0
+manual_seed: 100
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: TrainSet
+    type: Dataset_SDSDImage
+    random_reverse: true
+    border_mode: false
+    dataroot_gt: data/SDSD/indoor_static_np/GT
+    dataroot_lq: data/SDSD/indoor_static_np/input
+    train_size: [960, 512]
+    cache_keys: ~
+    cache_data: true
+    padding: new_info
+    testing_dir: pair11,pair21,pair1,pair19,pair4,pair9
+
+    filename_tmpl: "{}"
+    io_backend:
+      type: disk
+
+    N_frames: 3
+    use_flip: true
+    use_rot: true
+    color: RGB
+
+    use_shuffle: true
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 1
+
+    mini_batch_sizes: [1]
+    iters: [300000]
+    gt_size: 64
+    gt_sizes: [64]
+
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: ValSet
+    type: Dataset_SDSDImage
+    dataroot_gt: data/SDSD/indoor_static_np/GT
+    dataroot_lq: data/SDSD/indoor_static_np/input
+    cache_data: true
+    N_frames: 3
+    padding: new_info
+    train_size: [960, 512]
+    testing_dir: pair11,pair21,pair1,pair19,pair4,pair9
+
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: MultiModalRetinexFormer
+  in_channels: 3
+  out_channels: 3
+  n_feat: 40
+  stage: 1
+  num_blocks: [1, 2, 2]
+
+  fusion_type: gate
+
+  modalities:
+    depth:
+      enabled: true
+      encoder: vitb
+      checkpoint: Depth-Anything-V2/checkpoints/depth_anything_v2_vitb.pth
+      freeze: true
+
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# training settings
+train:
+  total_iter: 300000
+  warmup_iter: -1
+  use_grad_clip: true
+
+  scheduler:
+    type: CosineAnnealingRestartCyclicLR
+    periods: [92000, 208000]
+    restart_weights: [1, 1]
+    eta_mins: [0.0003, 0.000001]
+
+  mixing_augs:
+    mixup: true
+    mixup_beta: 1.2
+    use_identity: true
+
+  optim_g:
+    type: Adam
+    lr: !!float 2e-4
+    betas: [0.9, 0.999]
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1
+    reduction: mean
+
+  perceptual_opt:
+    type: PerceptualLoss
+    layer_weights:
+      relu3_1: 1.0
+      relu4_1: 1.0
+      relu5_1: 1.0
+    vgg_type: vgg19
+    use_input_norm: true
+    perceptual_weight: 0.5
+    style_weight: 0
+    criterion: l1
+
+# validation settings
+val:
+  window_size: 4
+  val_freq: !!float 1e3
+  save_img: false
+  rgb2bgr: true
+  use_image: false
+  max_minibatch: 8
+
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# logging settings
+logger:
+  print_freq: 500
+  save_checkpoint_freq: !!float 1e3
+  use_tb_logger: true
+  wandb:
+    project: low_light_depth
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
