@@ -7,8 +7,8 @@ tb_logger
 wandb
 tmp
 pretrained*
-Depth-Anything-V2/checkpoints
-dinov3/checkpoints
+Depth-Anything-V2/checkpoints/*.pth
+dinov3/checkpoints/*.pth
 old*
 scripts
 *visualization*
