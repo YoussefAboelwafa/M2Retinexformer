@@ -1,6 +1,6 @@
-conda create -n lol python=3.9 -y
+conda create -n m2retinexformer python=3.9 -y
 
-conda activate lol
+conda activate m2retinexformer
 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
