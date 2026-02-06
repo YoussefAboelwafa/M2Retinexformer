@@ -422,9 +422,7 @@ logger:
 
 ---
 
-## 🚀 Training
-
-### Single GPU Training
+## Training
 
 ```bash
 # Activate environment
@@ -495,7 +493,7 @@ Then open your browser to `http://localhost:6006` to view:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Basic Testing
 
@@ -567,7 +565,7 @@ Results are saved in `results/<dataset>/<config>/<checkpoint>/`
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 The model reports the following metrics:
 
@@ -577,7 +575,7 @@ The model reports the following metrics:
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you find this work useful, please cite:
 
@@ -590,7 +588,7 @@ If you find this work useful, please cite:
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This project is built on the baseline architecture of [Retinexformer](https://github.com/caiyuanhao1998/Retinexformer)
 
