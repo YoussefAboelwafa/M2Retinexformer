@@ -2,15 +2,20 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](#-citation)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](#citation)
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github)](https://github.com/YoussefAboelwafa/M2Retinexformer)
-[![Pretrained Models](https://img.shields.io/badge/Models-Download-brightgreen.svg)](#retinexformer-pretrained-weights)
+[![Pretrained Models](https://img.shields.io/badge/Models-Download-brightgreen.svg)](#m2retinexformer-pretrained-weights)
 
 </div>
 
 ## Introduction
 
-Low-light image enhancement is challenging due to complex degradations, including amplified noise, artifacts, and color distortion. While Retinex-based deep learning methods have achieved promising results, they primarily rely on single-modality RGB information. We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline. Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding. Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ playing a critical role in regulating the contribution of each modality when multiple modalities are combined. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
+Low-light image enhancement is challenging due to complex degradations, including amplified noise, artifacts, and color distortion. While Retinex-based deep learning methods have achieved promising results, they primarily rely on single-modality RGB information. 
+
+We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline. 
+
+Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding. 
+Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ playing a critical role in regulating the contribution of each modality when multiple modalities are combined. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
 
 <div align="center">
 <table>
