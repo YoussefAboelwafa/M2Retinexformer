@@ -168,11 +168,7 @@ See [dinov3/checkpoints/README.md](dinov3/checkpoints/README.md) for download li
 
 ### M2Retinexformer Pretrained Weights
 
-Download pretrained weights for M2-Retinexformer from:
-
-- [Google Drive]()
-
-Place them in `pretrained_weights/`:
+Download pretrained weights for M2-Retinexformer from [Google Drive](https://drive.google.com/drive/folders/1NEcb1H309PrjtHPbctpsNQSJyFbpIs3r?usp=sharing) & place them in `pretrained_weights/`:
 
 ```
 pretrained_weights/
