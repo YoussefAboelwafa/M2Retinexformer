@@ -34,6 +34,17 @@ Modalities are extracted at multiple scales and fused through _cross-attention_,
 
 1. **Depth encodes geometric structure**: Depth maps remain largely consistent regardless of illumination conditions, helping distinguish between dark regions caused by distance, occlusion, or shadows.
 
+<div align="center">
+<table>
+<tr>
+<td><img src="figures/depth_lowlight.png"><br><center><i>Low-light depth map</i></center></td>
+</tr>
+<tr>
+<td><img src="figures/depth_normallight.png"><br><center><i>Normal-light depth map</i></center></td>
+</tr>
+</table>
+</div>
+
 2. **Luminance and semantic features provide content-aware guidance**: Unlike Retinexformer where illumination prior is extracted once and concatenated, our approach maintains luminance features as a persistent modality fused via cross-attention throughout the enhancement process.
 
 3. **Cross-attention enables fusion of heterogeneous modalities**: Recent advances in multi-modal learning have demonstrated that cross-attention enables effective information exchange between heterogeneous modalities.
