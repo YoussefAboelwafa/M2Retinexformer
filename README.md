@@ -90,7 +90,7 @@ M2Retinexformer achieves the best or second-best performance on most benchmarks,
 
 ### Illumination Estimator
 
-We retain Retinexformer's estimator unchanged. It produces ${F}_{lu}$ along with ${I}_{lu}$.
+We retain Retinexformer's estimator unchanged. It produces $`{F}_{lu}`$ along with $`{I}_{lu}`$.
 
 ### Modality Extractor
 
@@ -106,7 +106,7 @@ The proposed gating mechanism allows the network to dynamically weigh each modal
 
 ### Progressive Refinement
 
-We cascade $\tau$ identical refinement stages, where $\tau$ is a hyperparameter $\in \{1,2,3\}$. Modality features are extracted once and reused across all stages, keeping computational overhead manageable.
+We cascade $`\tau`$ identical refinement stages, where $`\tau`$ is a hyperparameter $`\in \{1,2,3\}`$. Modality features are extracted once and reused across all stages, keeping computational overhead manageable.
 
 ### Model Complexity
 
