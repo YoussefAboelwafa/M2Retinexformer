@@ -2,9 +2,9 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](#citation)
-[![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github)](https://github.com/YoussefAboelwafa/M2Retinexformer)
-[![Pretrained Models](https://img.shields.io/badge/Models-Download-brightgreen.svg)](#m2retinexformer-pretrained-weights)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](#citation)
+[![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer)
+[![Models](https://img.shields.io/badge/Models-Download-brightgreen.svg?logo=google-drive&logoColor=white)](#m2retinexformer-pretrained-weights)
 
 </div>
 
