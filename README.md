@@ -1,4 +1,8 @@
-# M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement
+<div align="center">
+<img src="figures/wallpaper.png" width="1000px">
+</div>
+
+<br>
 
 <div align="center">
 
