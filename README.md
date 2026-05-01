@@ -14,11 +14,11 @@
 
 ## Introduction
 
-Low-light image enhancement is challenging due to complex degradations, including amplified noise, artifacts, and color distortion. While Retinex-based deep learning methods have achieved promising results, they primarily rely on single-modality RGB information. 
+Low-light image enhancement is challenging due to complex degradations, including amplified noise, artifacts, and color distortion. While Retinex-based deep learning methods have achieved promising results, they primarily rely on single-modality RGB information.
 
-We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline. 
+We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline.
 
-Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding. 
+Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding.
 Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ playing a critical role in regulating the contribution of each modality when multiple modalities are combined. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
 
 <div align="center">
@@ -144,7 +144,6 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ### 4. Install Dependencies
 
 ```bash
-# Core dependencies
 pip install matplotlib scikit-learn scikit-image opencv-python yacs joblib natsort h5py tqdm tensorboard
 
 pip install einops gdown addict future lmdb numpy pyyaml requests scipy yapf lpips thop timm nvitop
@@ -588,7 +587,6 @@ The model reports the following metrics:
 - **PSNR** (Peak Signal-to-Noise Ratio)
 - **SSIM** (Structural Similarity Index)
 
-
 ---
 
 ## Citation
@@ -597,7 +595,7 @@ If you find this work useful, please cite:
 
 ```bibtex
 @inproceedings{m2retinexformer,
-    
+
 }
 
 ```
@@ -609,3 +607,7 @@ If you find this work useful, please cite:
 This project is built on the baseline architecture of [Retinexformer](https://github.com/caiyuanhao1998/Retinexformer)
 
 ---
+
+## Contributing
+
+This project is open for modification. If you have a contribution or find an issue to fix, please fork the repo and open a pull request describing the changes.
