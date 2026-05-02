@@ -287,7 +287,6 @@ class ReduceLROnPlateauWrapper:
         cooldown=0,
         min_lr=0,
         eps=1e-8,
-        verbose=False,
         metric="psnr",  # Which validation metric to monitor (used by training loop)
     ):
         self.optimizer = optimizer
@@ -302,7 +301,6 @@ class ReduceLROnPlateauWrapper:
             cooldown=cooldown,
             min_lr=min_lr,
             eps=eps,
-            verbose=verbose,
         )
         self._last_lr = [group["lr"] for group in optimizer.param_groups]
         self.last_epoch = 0
