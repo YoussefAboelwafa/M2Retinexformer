@@ -2,7 +2,7 @@
 name: SID
 model_type: ImageCleanModel
 scale: 1
-num_gpu: 0
+num_gpu: 1
 manual_seed: 100
 
 # dataset and data loader settings

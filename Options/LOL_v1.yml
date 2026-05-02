@@ -2,7 +2,7 @@
 name: LOL_v1
 model_type: ImageCleanModel
 scale: 1
-num_gpu: 0
+num_gpu: 1
 manual_seed: 100
 use_amp: true
 
@@ -83,7 +83,6 @@ train:
     threshold_mode: rel
     cooldown: 5 # Number of epochs to wait after reducing LR
     min_lr: !!float 1e-10
-    verbose: true
     metric: psnr # Which validation metric to monitor
 
   mixing_augs:
