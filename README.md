@@ -6,9 +6,23 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](#citation)
-[![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer)
-[![Models](https://img.shields.io/badge/Models-Download-brightgreen.svg?logo=google-drive&logoColor=white)](#m2retinexformer-pretrained-weights)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](#citation) &nbsp;&nbsp;
+[![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer) &nbsp;&nbsp;
+[![Models](https://img.shields.io/badge/Models-Download-yellow.svg?logo=huggingface&logoColor=yellow)](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main)
+
+
+</div>
+
+<div align="center">
+
+# M2Retinexformer <br> Multi-Modal Retinexformer for Low-Light Image Enhancement
+
+
+### [ICIP 2026](https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings)
+
+**[Youssef Aboelwafa](https://scholar.google.com/citations?hl=en&user=i9T3PFMAAAAJ)&nbsp;&nbsp;&nbsp;[Hicham Elmongui](https://scholar.google.com/citations?user=Rh70eUEAAAAJ&hl=en)&nbsp;&nbsp;&nbsp;[Marwan Torki](https://scholar.google.com/citations?hl=en&user=aYLNZT4AAAAJ)**
+
+Alexandria University
 
 </div>
 
@@ -41,10 +55,10 @@ Modalities are extracted at multiple scales and fused through _cross-attention_,
 <div align="center">
 <table>
 <tr>
-<td><img src="figures/depth_lowlight.png"><br><center><i>Low-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_lowlight.png" width="500px"><br><center><i>Low-light depth map</i></center></td>
 </tr>
 <tr>
-<td><img src="figures/depth_normallight.png"><br><center><i>Normal-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_normallight.png" width="500px"><br><center><i>Normal-light depth map</i></center></td>
 </tr>
 </table>
 </div>
@@ -182,7 +196,7 @@ See [dinov3/checkpoints/README.md](dinov3/checkpoints/README.md) for download li
 
 ### M2Retinexformer Pretrained Weights
 
-Download pretrained weights for M2-Retinexformer from [Google Drive](https://drive.google.com/drive/folders/1NEcb1H309PrjtHPbctpsNQSJyFbpIs3r?usp=sharing) & place them in `pretrained_weights/`:
+Download pretrained weights for M2-Retinexformer from [Hugging Face](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main) & place them in `pretrained_weights/`:
 
 ```
 pretrained_weights/
@@ -568,9 +582,9 @@ For better results, add `--self_ensemble`:
 
 ```bash
 python3 Enhancement/test_from_dataset.py \
-    --opt Options/LOL_v1.yml \
-    --weights pretrained_weights/LOL_v1.pth \
-    --dataset LOL_v1 \
+    --opt Options/LOL_v2_real.yml \
+    --weights pretrained_weights/LOL_v2_real.pth \
+    --dataset LOL_v2_real \
     --self_ensemble
 ```
 
