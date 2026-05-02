@@ -1,4 +1,5 @@
 # ignored folders
+.vscode
 /data
 datasets
 experiments
