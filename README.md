@@ -73,7 +73,7 @@ Modalities are extracted at multiple scales and fused through _cross-attention_,
 | ------------- | ----------------------------------------------------------------------- | -------------------------------------------------- |
 | **Depth**     | [Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2) | Illumination-invariant geometric structure         |
 | **Semantic**  | [DINOv3](https://github.com/facebookresearch/dinov3)                    | Scene Understanding & object-aware representations |
-| **Luminance** | NTSC formulation + Sobel edges + Local contrast + Multi-scale pyramid   | Guidance on brightness distribution                |
+| **Luminance** | NTSC + Sobel edges + Local contrast + Multi-scale pyramid               | Guidance on brightness distribution                |
 
 ---
 
@@ -309,10 +309,8 @@ data/
 </details>
 
 > [!IMPORTANT]
-
-> For SMID, download `text_list.txt` from [Google Drive](https://drive.google.com/file/d/199qrfizUeZfgq3qVjrM74mZ_nlacgwiP/view) and place in `data/SMID/`.
-
-> Use this [gist](https://gist.github.com/YoussefAboelwafa/7395b45616ac878fdd1879a0712546e4) to download datasets from google drive and jointly unzip `.zip` and `.z01` files for SMID, SDSD datasets
+> For SMID, download `text_list.txt` from [Google Drive](https://drive.google.com/file/d/199qrfizUeZfgq3qVjrM74mZ_nlacgwiP/view) and place in `data/SMID/`. <br>
+> Use this [gist](https://gist.github.com/YoussefAboelwafa/7395b45616ac878fdd1879a0712546e4) to download datasets from google drive and jointly unzip `.zip` and `.z01` files for SMID, SDSD datasets.
 
 ---
 
