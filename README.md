@@ -33,7 +33,7 @@ Low-light image enhancement is challenging due to complex degradations, includin
 We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline.
 
 Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding.
-Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ playing a critical role in regulating the contribution of each modality when multiple modalities are combined. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
+Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ dynamically balancing illumination-guided self-attention and cross-attention based on the reliability of auxiliary cues. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
 
 <div align="center">
 <table>
@@ -55,10 +55,10 @@ Modalities are extracted at multiple scales and fused through _cross-attention_,
 <div align="center">
 <table>
 <tr>
-<td align="center"><img src="figures/depth_lowlight.png" width="500px"><br><center><i>Low-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_lowlight.png" width="600px"><br><center><i>Low-light depth map</i></center></td>
 </tr>
 <tr>
-<td align="center"><img src="figures/depth_normallight.png" width="500px"><br><center><i>Normal-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_normallight.png" width="600px"><br><center><i>Normal-light depth map</i></center></td>
 </tr>
 </table>
 </div>
@@ -108,11 +108,11 @@ M2Retinexformer achieves the best or second-best performance on most benchmarks,
 
 ### Illumination Estimator
 
-We retain Retinexformer's estimator unchanged. It produces $`{F}_{lu}`$ along with $`{I}_{lu}`$.
+We retain Retinexformer's estimator, producing ${I}_{lu}$ and ${F}_{lu}$.
 
 ### Modality Extractor
 
-Modality features are extracted and aligned into a common representation space, and subsequently injected into the multi-modal corruption restorer at multiple scales to enable efficient fusion with RGB features via cross-attention.
+Modality features $F_m$ are extracted, aligned, and injected at multiple scales for cross-attention fusion with RGB features $F_{in}$.
 
 ### Multi-Modal Corruption Restorer
 
@@ -120,11 +120,12 @@ The restorer follows a U-shaped encoder-decoder architecture. The proposed MMCAB
 
 ### Adaptive Gating
 
-The proposed gating mechanism allows the network to dynamically weigh each modality, leading to more stable training and improved robustness.
+Gating balances illumination-guided self-attention from 
+the RGB input and cross-attention from the auxiliary modalities based on modality reliability. 
 
 ### Progressive Refinement
 
-We cascade $`\tau`$ identical refinement stages, where $`\tau`$ is a hyperparameter $`\in \{1,2,3\}`$. Modality features are extracted once and reused across all stages, keeping computational overhead manageable.
+We cascade $\tau \in \{1,2,3\}$ identical refinement stages. Modality features are extracted once and reused across stages to reduce computational overhead.
 
 ### Model Complexity
 
@@ -160,7 +161,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ```bash
 pip install matplotlib scikit-learn scikit-image opencv-python yacs joblib natsort h5py tqdm tensorboard
 
-pip install einops gdown addict future lmdb numpy pyyaml requests scipy yapf lpips thop timm nvitop
+pip install einops gdown addict future lmdb numpy pyyaml requests scipy yapf lpips thop timm
 
 ```
 
@@ -307,10 +308,11 @@ data/
 
 </details>
 
-**Important Notes:**
+> [!IMPORTANT]
 
-- For SMID, download `text_list.txt` from [Google Drive](https://drive.google.com/file/d/199qrfizUeZfgq3qVjrM74mZ_nlacgwiP/view) and place in `data/SMID/SMID_Long_np/` and `data/SMID/`.
-- Use this [gist](https://gist.github.com/YoussefAboelwafa/7395b45616ac878fdd1879a0712546e4) to download datasets from google drive and jointly unzip `.zip` and `.z01` files for SMID, SDSD datasets
+> For SMID, download `text_list.txt` from [Google Drive](https://drive.google.com/file/d/199qrfizUeZfgq3qVjrM74mZ_nlacgwiP/view) and place in `data/SMID/`.
+
+> Use this [gist](https://gist.github.com/YoussefAboelwafa/7395b45616ac878fdd1879a0712546e4) to download datasets from google drive and jointly unzip `.zip` and `.z01` files for SMID, SDSD datasets
 
 ---
 
@@ -373,14 +375,14 @@ network_g:
       freeze: true
 
     luminance:
-      enabled: true
+      enabled: false
       use_gradients: true
       use_local_contrast: true
       use_multiscale: true
       num_feature_layers: 3
 
     dinov3:
-      enabled: true
+      enabled: false
       encoder: vitb16
       checkpoint: dinov3/checkpoints/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth
       freeze: true
@@ -455,7 +457,7 @@ logger:
 
 ```bash
 # Activate environment
-conda activate m2retinex
+conda activate m2retinexformer
 
 # LOL-v1
 python3 basicsr/train.py --opt Options/LOL_v1.yml
@@ -527,6 +529,9 @@ Then open your browser to `http://localhost:6006` to view:
 ### Basic Testing
 
 ```bash
+# Activate environment
+conda activate m2retinexformer
+
 # LOL-v1
 python3 Enhancement/test_from_dataset.py \
     --opt Options/LOL_v1.yml \
@@ -578,7 +583,7 @@ bash evaluate.sh
 
 ### Self-Ensemble Testing
 
-For better results, add `--self_ensemble`:
+For better results use Test Time Augmentation (TTA), just add `--self_ensemble`:
 
 ```bash
 python3 Enhancement/test_from_dataset.py \
@@ -587,6 +592,9 @@ python3 Enhancement/test_from_dataset.py \
     --dataset LOL_v2_real \
     --self_ensemble
 ```
+
+> [!NOTE]
+> We note that all our experiments are conducted without GT Mean Correction for fair comparison with other methods, but if you want to apply it, add `--GT_mean` to the command.
 
 ### Output Directory
 
@@ -609,7 +617,7 @@ If you find this work useful, please cite:
 
 ```bibtex
 @inproceedings{m2retinexformer,
-
+  # Will be updated after publication
 }
 
 ```
