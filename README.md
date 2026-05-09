@@ -55,10 +55,10 @@ Modalities are extracted at multiple scales and fused through _cross-attention_,
 <div align="center">
 <table>
 <tr>
-<td align="center"><img src="figures/depth_lowlight.png" width="600px"><br><center><i>Low-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_lowlight.png" width="800px"><br><center><i>Low-light depth map</i></center></td>
 </tr>
 <tr>
-<td align="center"><img src="figures/depth_normallight.png" width="600px"><br><center><i>Normal-light depth map</i></center></td>
+<td align="center"><img src="figures/depth_normallight.png" width="800px"><br><center><i>Normal-light depth map</i></center></td>
 </tr>
 </table>
 </div>
@@ -93,9 +93,68 @@ M2Retinexformer achieves the best or second-best performance on most benchmarks,
 </div>
 
 <div align="center">
-<img src="figures/vis.png" width="1000px">
+<img src="figures/vis1.png" width="1000px">
+<img src="figures/vis2.png" width="1000px">
 <p><i> Visual comparisons show that prior methods suffer from color distortion or residual noise, whereas M2Retinexformer produces well-exposed images with natural colors and reduced noise, benefiting from the injected modalities and perceptual loss.
 </i></p>
+</div>
+
+---
+
+<div align="center">
+<table>
+
+<tr>
+<td align="center"><b>Input</b></td>
+<td align="center"><b>Retinexformer</b></td>
+<td align="center"><b>M2Retinexformer</b></td>
+<td align="center"><b>Ground Truth</b></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/4_0.png" width="300px"></td>
+<td><img src="figures/outputs/4_1.png" width="300px"></td>
+<td><img src="figures/outputs/4_2.png" width="300px"></td>
+<td><img src="figures/outputs/4_3.png" width="300px"></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/3_0.png" width="300px"></td>
+<td><img src="figures/outputs/3_1.png" width="300px"></td>
+<td><img src="figures/outputs/3_2.png" width="300px"></td>
+<td><img src="figures/outputs/3_3.png" width="300px"></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/5_0.png" width="300px"></td>
+<td><img src="figures/outputs/5_1.png" width="300px"></td>
+<td><img src="figures/outputs/5_2.png" width="300px"></td>
+<td><img src="figures/outputs/5_3.png" width="300px"></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/6_0.png" width="300px"></td>
+<td><img src="figures/outputs/6_1.png" width="300px"></td>
+<td><img src="figures/outputs/6_2.png" width="300px"></td>
+<td><img src="figures/outputs/6_3.png" width="300px"></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/1_0.png" width="300px"></td>
+<td><img src="figures/outputs/1_1.png" width="300px"></td>
+<td><img src="figures/outputs/1_2.png" width="300px"></td>
+<td><img src="figures/outputs/1_3.png" width="300px"></td>
+</tr>
+
+<tr>
+<td><img src="figures/outputs/2_0.png" width="300px"></td>
+<td><img src="figures/outputs/2_1.png" width="300px"></td>
+<td><img src="figures/outputs/2_2.png" width="300px"></td>
+<td><img src="figures/outputs/2_3.png" width="300px"></td>
+</tr>
+
+</table>
+<p><i> More visual comparisons from LOL-v1 and LOL-v2 datasets. </i></p>
 </div>
 
 ---
@@ -614,8 +673,14 @@ The model reports the following metrics:
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{m2retinexformer,
-  # Will be updated after publication
+ # Will be updated after publication
+@inproceedings{aboelwafa2026m2retinexformer,
+  title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement},
+  author={Aboelwafa, Youssef and Elmongui, Hicham G. and Torki, Marwan},
+  booktitle={2026 IEEE International Conference on Image Processing (ICIP)},
+  pages={---},
+  year={2026},
+  organization={IEEE}
 }
 
 ```
