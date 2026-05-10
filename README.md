@@ -4,37 +4,24 @@
 
 <br>
 
-<div align="center">
-
-<a href="https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings"><img src="figures/ieee.png" align="left" width="120px"></a>
-<a href="https://www.knights-lab.com/"><img src="figures/knights_lab.png" align="right" width="100px"></a>
-
-</div>
-
-
-<br>
 
 <div align="center">
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](#citation) &nbsp;&nbsp;
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer) &nbsp;&nbsp;
-[![Models](https://img.shields.io/badge/Models-Download-yellow.svg?logo=huggingface&logoColor=yellow)](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main)
+[![Models](https://img.shields.io/badge/Weights-HuggingFace-yellow.svg?logo=huggingface&logoColor=yellow)](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main)
 
 </div>
-
-<br>
 
 <div align="center">
 
 # M2Retinexformer <br> Multi-Modal Retinexformer for Low-Light Image Enhancement
 
-### [ICIP 2026](https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings)
+<a href="https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings"><img src="figures/ieee.png" align="left" width="100px"></a>
+<a href="https://www.knights-lab.com/"><img src="figures/knights_lab.png" align="right" width="100px"></a>
+<br>
 
-**[Youssef Aboelwafa](https://scholar.google.com/citations?hl=en&user=i9T3PFMAAAAJ)&nbsp;&nbsp;&nbsp;[Hicham Elmongui](https://scholar.google.com/citations?user=Rh70eUEAAAAJ&hl=en)&nbsp;&nbsp;&nbsp;[Marwan Torki](https://scholar.google.com/citations?hl=en&user=aYLNZT4AAAAJ)**
-
-Alexandria University
-
-<br clear="all">
+### IEEE ICIP 2026 <br> **[Youssef Aboelwafa](https://scholar.google.com/citations?hl=en&user=i9T3PFMAAAAJ)** <br> [Hicham Elmongui](https://scholar.google.com/citations?user=Rh70eUEAAAAJ&hl=en) <br> [Marwan Torki](https://scholar.google.com/citations?hl=en&user=aYLNZT4AAAAJ) <br> Alexandria University
 
 </div>
 
