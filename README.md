@@ -15,14 +15,24 @@
 
 <div align="center">
 
-# M2Retinexformer <br> Multi-Modal Retinexformer for Low-Light Image Enhancement
+<table>
+<tr>
+<td align="center" width="200px"><img src="figures/ieee.png" width="200px"></td>
+<td align="center">
 
+# M2Retinexformer <br> Multi-Modal Retinexformer for Low-Light Image Enhancement
 
 ### [ICIP 2026](https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings)
 
 **[Youssef Aboelwafa](https://scholar.google.com/citations?hl=en&user=i9T3PFMAAAAJ)&nbsp;&nbsp;&nbsp;[Hicham Elmongui](https://scholar.google.com/citations?user=Rh70eUEAAAAJ&hl=en)&nbsp;&nbsp;&nbsp;[Marwan Torki](https://scholar.google.com/citations?hl=en&user=aYLNZT4AAAAJ)**
 
 Alexandria University
+
+</td>
+<td align="center" width="180px"><img src="figures/knights_lab.png" width="150px"></td>
+
+</tr>
+</table>
 
 </div>
 
@@ -105,10 +115,10 @@ M2Retinexformer achieves the best or second-best performance on most benchmarks,
 <table>
 
 <tr>
-<td align="center"><b>Input</b></td>
+<td align="center"><b>Input_Image</b></td>
 <td align="center"><b>Retinexformer</b></td>
 <td align="center"><b>M2Retinexformer</b></td>
-<td align="center"><b>Ground Truth</b></td>
+<td align="center"><b>Ground_Truth</b></td>
 </tr>
 
 <tr>
@@ -673,16 +683,13 @@ The model reports the following metrics:
 If you find this work useful, please cite:
 
 ```bibtex
- # Will be updated after publication
 @inproceedings{aboelwafa2026m2retinexformer,
   title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement},
   author={Aboelwafa, Youssef and Elmongui, Hicham G. and Torki, Marwan},
   booktitle={2026 IEEE International Conference on Image Processing (ICIP)},
-  pages={---},
   year={2026},
   organization={IEEE}
 }
-
 ```
 
 ---
