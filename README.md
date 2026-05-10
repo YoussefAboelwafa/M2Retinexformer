@@ -19,6 +19,8 @@
 
 <a href="https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings"><img src="figures/ieee.png" align="left" width="100px"></a>
 <a href="https://www.knights-lab.com/"><img src="figures/knights_lab.png" align="right" width="100px"></a>
+
+<br>
 <br>
 
 ### IEEE ICIP 2026 <br> **[Youssef Aboelwafa](https://scholar.google.com/citations?hl=en&user=i9T3PFMAAAAJ)** <br> [Hicham Elmongui](https://scholar.google.com/citations?user=Rh70eUEAAAAJ&hl=en) <br> [Marwan Torki](https://scholar.google.com/citations?hl=en&user=aYLNZT4AAAAJ) <br> Alexandria University
