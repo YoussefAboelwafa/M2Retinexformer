@@ -6,19 +6,20 @@
 
 <div align="center">
 
+<img src="figures/ieee.png" align="left" width="120px">
+<img src="figures/knights_lab.png" align="right" width="100px">
+
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](#citation) &nbsp;&nbsp;
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer) &nbsp;&nbsp;
 [![Models](https://img.shields.io/badge/Models-Download-yellow.svg?logo=huggingface&logoColor=yellow)](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main)
+
 
 
 </div>
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="200px"><img src="figures/ieee.png" width="200px"></td>
-<td align="center">
+
 
 # M2Retinexformer <br> Multi-Modal Retinexformer for Low-Light Image Enhancement
 
@@ -28,11 +29,7 @@
 
 Alexandria University
 
-</td>
-<td align="center" width="180px"><img src="figures/knights_lab.png" width="150px"></td>
-
-</tr>
-</table>
+<br clear="all">
 
 </div>
 
