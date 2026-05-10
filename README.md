@@ -9,7 +9,12 @@
 <a href="https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings"><img src="figures/ieee.png" align="left" width="120px"></a>
 <a href="https://www.knights-lab.com/"><img src="figures/knights_lab.png" align="right" width="100px"></a>
 
+</div>
+
+
 <br>
+
+<div align="center">
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](#citation) &nbsp;&nbsp;
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer) &nbsp;&nbsp;
