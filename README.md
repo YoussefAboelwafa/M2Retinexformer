@@ -27,6 +27,20 @@
 
 </div>
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Highlights](#highlights)
+- [Network Architecture](#network-architecture)
+- [Installation](#installation)
+- [Dataset Preparation](#dataset-preparation)
+- [Configurations](#configurations)
+- [Training](#training)
+- [Testing](#testing)
+- [Citation](#citation)
+- [Acknowledgements](#acknowledgements)
+- [Contributing](#contributing)
+
+
 ## Introduction
 
 Low-light image enhancement is challenging due to complex degradations, including amplified noise, artifacts, and color distortion. While Retinex-based deep learning methods have achieved promising results, they primarily rely on single-modality RGB information.
@@ -34,7 +48,9 @@ Low-light image enhancement is challenging due to complex degradations, includin
 We propose **M2Retinexformer** (Multi-Modal Retinexformer), a novel framework that extends **[Retinexformer](https://arxiv.org/abs/2303.06705)** by incorporating _depth cues_, _luminance priors_, and _semantic features_ within a progressive refinement pipeline.
 
 Depth provides geometric context that is invariant to lighting variations, while luminance and semantic features offer explicit guidance on brightness distribution and scene understanding.
-Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ dynamically balancing illumination-guided self-attention and cross-attention based on the reliability of auxiliary cues. Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
+Modalities are extracted at multiple scales and fused through _cross-attention_, with _adaptive gating_ dynamically balancing illumination-guided self-attention and cross-attention based on the reliability of auxiliary cues. 
+
+Evaluations on the LOL, SID, SMID, and SDSD benchmarks demonstrate overall improvements over Retinexformer and recent state-of-the-art methods.
 
 <div align="center">
 <table>
@@ -241,21 +257,21 @@ bash requirements.sh
 
 ---
 
-## Download Pretrained Models
+### Download Pretrained Models
 
-### Depth-Anything-V2 Checkpoints
+#### Depth-Anything-V2 Checkpoints
 
 Download the Depth-Anything-V2 pretrained weights and place them in `Depth-Anything-V2/checkpoints/`.
 
 See [Depth-Anything-V2/checkpoints/README.md](Depth-Anything-V2/checkpoints/README.md) for download links and instructions.
 
-### DINOv3 Checkpoints
+#### DINOv3 Checkpoints
 
 Download DINOv3 pretrained weights and place them in `dinov3/checkpoints/`.
 
 See [dinov3/checkpoints/README.md](dinov3/checkpoints/README.md) for download links and instructions.
 
-### M2Retinexformer Pretrained Weights
+#### M2Retinexformer Pretrained Weights
 
 Download pretrained weights for M2-Retinexformer from [Hugging Face](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main) & place them in `pretrained_weights/`:
 
@@ -374,9 +390,9 @@ data/
 
 ---
 
-## Configuration (YML Files)
+## Configurations
 
-Configuration files are located in `Options/`. Here's how to configure the multi-modal features:
+Configuration files (YML files) are located in `Options/`. Here's how to configure the multi-modal features:
 
 ### Key Configuration Sections
 
@@ -550,7 +566,7 @@ path:
 
 ---
 
-## Monitoring Training & Logs
+### Monitoring Training & Logs
 
 During training, all experiment outputs are organized in two main directories:
 
@@ -660,7 +676,7 @@ Results are saved in `results/<dataset>/<config>/<checkpoint>/`
 
 ---
 
-## Evaluation Metrics
+### Evaluation Metrics
 
 The model reports the following metrics:
 
