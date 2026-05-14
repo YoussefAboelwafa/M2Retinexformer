@@ -699,14 +699,6 @@ If you find this work useful, please cite:
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2605.12556}, 
 }
-
-@inproceedings{aboelwafa2026m2retinexformer,
-  title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement},
-  author={Aboelwafa, Youssef and Elmongui, Hicham G. and Torki, Marwan},
-  booktitle={2026 IEEE International Conference on Image Processing (ICIP)},
-  year={2026},
-  organization={IEEE}
-}
 ```
 
 ---
