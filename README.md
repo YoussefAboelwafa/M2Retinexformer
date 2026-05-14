@@ -7,7 +7,7 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](#citation) &nbsp;&nbsp;
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2605.12556) &nbsp;&nbsp;
 [![Code](https://img.shields.io/badge/Code-GitHub-181717.svg?logo=github&logoColor=white)](https://github.com/YoussefAboelwafa/M2Retinexformer) &nbsp;&nbsp;
 [![Models](https://img.shields.io/badge/Weights-HuggingFace-yellow.svg?logo=huggingface&logoColor=yellow)](https://huggingface.co/YoussefAboelwafa/M2Retinexformer/tree/main)
 
@@ -690,6 +690,16 @@ The model reports the following metrics:
 If you find this work useful, please cite:
 
 ```bibtex
+@misc{aboelwafa2026m2retinexformermultimodalretinexformerlowlight,
+      title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement}, 
+      author={Youssef Aboelwafa and Hicham G. Elmongui and Marwan Torki},
+      year={2026},
+      eprint={2605.12556},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.12556}, 
+}
+
 @inproceedings{aboelwafa2026m2retinexformer,
   title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement},
   author={Aboelwafa, Youssef and Elmongui, Hicham G. and Torki, Marwan},
