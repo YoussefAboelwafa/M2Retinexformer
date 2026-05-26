@@ -690,14 +690,11 @@ The model reports the following metrics:
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{aboelwafa2026m2retinexformermultimodalretinexformerlowlight,
-      title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement}, 
-      author={Youssef Aboelwafa and Hicham G. Elmongui and Marwan Torki},
-      year={2026},
-      eprint={2605.12556},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2605.12556}, 
+@article{aboelwafa2026m2retinexformer,
+  title={M2Retinexformer: Multi-Modal Retinexformer for Low-Light Image Enhancement},
+  author={Aboelwafa, Youssef and Elmongui, Hicham G and Torki, Marwan},
+  journal={arXiv preprint arXiv:2605.12556},
+  year={2026}
 }
 ```
 
