@@ -184,7 +184,7 @@ M2Retinexformer achieves the best or second-best performance on most benchmarks,
 
 ### Illumination Estimator
 
-We retain Retinexformer's estimator, producing ${I}_{lu}$ and ${F}_{lu}$.
+We retain Retinexformer's estimator, producing $I_{lu}$ and $F_{lu}$.
 
 ### Modality Extractor
 
