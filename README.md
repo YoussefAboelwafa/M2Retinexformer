@@ -697,6 +697,15 @@ If you find this work useful, please cite:
   year={2026}
 }
 ```
+OR
+
+```bibtex
+@INPROCEEDINGS{aboelwafa2026m2retinexformer,
+  author={Aboelwafa, Youssef and Elmongui, Hicham G. and Torki, Marwan},
+  booktitle={2026 IEEE International Conference on Image Processing (ICIP)}, 
+  title={M2retinexformer: Multi-Modal Retinexformer For Low-Light Image Enhancement}, 
+  year={2026},
+```
 
 ---
 
